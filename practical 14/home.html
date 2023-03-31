@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm">
+        <select name="mymenu" id="" onchange="f1(this.value)">
+        <option value="about.html">About</option>
+        <option value="contact.html">Contact</option>
+        <option value="academic.html">Course</option>
+        </select>
+    </form>
+</body>
+<script>
+function f1(v){
+    if(v != ""){
+        parent.cha.document.location.href = v;
+    } 
+}
+</script>
+</html>
