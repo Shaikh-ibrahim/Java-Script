@@ -1,0 +1,90 @@
+<html>
+    <body>
+        <form action="" name="form1" onload="">
+            <center>
+                <select name="s" onchange="f1(this.value)"> 
+                    <option value="CO5IB">CO5IB</option>
+                    <option value="CO4IB">CO4IB</option>
+                </select>
+                <select name="s1" id="ss"></select><br><br>
+                <input type="checkbox" name="c1" value="Ibrahim">Ibrahim 
+                <input type="checkbox" name="c2" value="Gulamnabi">Gulamnabi 
+                <input type="checkbox" name="c3" value="Asil">Asil <br>
+                <input type="submit" name="" id="submit" onclick="f2()">
+                <button onclick="f3()">Test</button>
+            </center>
+        </form>
+    </body>
+    <script>
+                   
+                   var s = new Array();
+        for(var i = 0;i < 4;i++){
+                s[i] = document.createElement("option");
+                }
+        function f1(x){
+            var co5 = new Array("STE","OSY","AJP","CSS");
+            var co4 = new Array("DBMS","CGR","CPP","DSU");
+            // var s = document.getElementById('ss');
+            // document.forms.form1.append(s);
+            // s0 = document.createElement("option");
+            // s[1] = document.createElement("option");
+            // s[2] = document.createElement("option");
+            // s[3] = document.createElement("option");
+            // document.forms.form1.s1.append(s0);
+            if(x == "CO5IB"){
+                for(var i = 0;i < 4;i++){
+                    s[i].text = co5[i];
+                    s[i].value = co5[i];
+                    document.forms.form1.s1.append(s[i]);
+                }
+                // s[0].text = "STE"
+                // s[1].text = "CSS"
+                // s[2].text = "OSY"
+                // s[3].text = "AJP"
+            }
+            else{
+                for(var i = 0;i < 4;i++){
+                    s[i].text = co4[i];
+                    s[i].value = co4[i];
+                    document.forms.form1.s1.append(s[i]);
+                }
+                // s[0].text = "OPP"
+                // s[1].text = "CGR"
+                // s[2].text = "DBMS"
+                // s[3].text = "DSU"
+            }
+        }
+        function f2(){
+            
+            // with(document.forms.form1){
+            //     alert()
+            // }
+            // var se = 
+            var msg = document.forms.form1.s1.value + "\t : \n";
+            with(document.forms.form1){
+                if(c1.checked == true){
+                    msg = msg + s.value + "\t" + c1.value + "\t P \n";
+                }
+                else{
+                    msg = msg + document.forms.form1.s.value + "\t" + c1.value + "\t A \n";
+                }
+                if(c2.checked == true){
+                    msg = msg + document.forms.form1.s.value + "\t" + c2.value + "\t P \n";
+                }
+                else{
+                    msg = msg + document.forms.form1.s.value + "\t" + c2.value + "\t A \n";
+                }
+                if(c3.checked == true){
+                    msg = msg + document.forms.form1.s.value + "\t" + c3.value + "\t P \n";
+                }
+                else{
+                    msg = msg + document.forms.form1.s.value + "\t" + c3.value + "\t A \n";
+                }
+            }
+            alert(msg)
+        }
+        function f3(){
+            
+        }
+    </script>
+</html>

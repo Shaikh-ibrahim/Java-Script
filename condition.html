@@ -1,0 +1,51 @@
+<html>
+    <body>
+        shaikh ibrahim
+        <p id="before"></p>
+        <p id="demo" onclick="f1()">123</p>
+    </body>
+    <script>
+            var a = 20;
+            var b = 30;
+            var c = 10;
+        document.getElementById("before").innerHTML = a + "," + b + "," + c;
+        function f1(){
+            var arr = new Array();
+            if(a < b && a < c){
+                arr[0]  = a;
+                if(b < c){
+                    arr[1] = b;
+                    arr[2] = c;
+                }
+                else{
+                    arr[1] = c;
+                    arr[2] = b;
+                }
+            }
+            else if(b < a && b < c){
+                arr[0]  = b;
+                if(a < c){
+                    arr[1] = a;
+                    arr[2] = c;
+                }
+                else{
+                    arr[1] = c;
+                    arr[2] = a;
+                }
+            }
+            else if(c < a && c < b){
+                arr[0]  = c;
+                if(b < a){
+                    arr[1] = b;
+                    arr[2] = a;
+                }
+                else{
+                    arr[1] = a;
+                    arr[2] = b;
+                }
+            }
+            alert(arr);
+            document.getElementById("demo").innerHTML = arr;
+        }
+    </script>
+</html>

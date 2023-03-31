@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryyyy</title>
+</head>
+<style>
+    div{
+        width: 400px;
+        height: 230px;
+        background-color: gray;
+        margin-top: 16%;
+        border-radius: 30px;
+    }
+    input{
+        margin-top: 40px;
+        border-radius: 30px;
+        height: 25px;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+</style>
+<body>
+    <center><div>
+        <input type="text" placeholder="" id="sss">
+
+        <br><input type="password" placeholder="" id="ppp">
+        <br><input type="button" placeholder="submit" value="submit" id="btn" onclick="clic()">
+    </div></center>
+    <script>
+        // var user = document.getElementById("sss").value;
+        // var pass = document.getElementById("ppp").value;
+        function clic(){
+            if(document.getElementById("sss").value == "ibrahim" && document.getElementById("ppp").value == "password"){
+                alert("login")
+                document.write("<a href = www.google.com >hello</a>");
+            }
+            else{
+                alert("Somting went worng !!!");
+            }
+        }
+    </script>
+</body>
+</html>

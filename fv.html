@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <input type="text" id="demo">
+        <button onclick="f1()">Count Vowels</button>
+    </body>
+    <script>
+        function f1(){
+            var s = document.getElementById("demo").value;
+            var count = 0;
+            for(var i = 0;i < s.length;i++){
+                if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u'){
+                    count = count + 1;
+                }
+            }
+            alert(count);
+        }
+    </script>
+</html>

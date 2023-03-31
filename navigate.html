@@ -1,0 +1,24 @@
+<html>
+<body>
+    <button onclick="de()">SHAIKH</button>
+</body>
+<script>
+    function de() {
+        var userAgent = navigator.userAgent;
+        var browserName;
+        if (userAgent.match("Edg")) {
+            browserName = "edge";
+        }
+        else if (userAgent.match("Chrome")) {
+            browserName = "chrome";
+        } else if (userAgent.match("firefox")) {
+            browserName = "firefox";
+        }
+        else {
+            browserName = "No browser detection";
+        }
+        alert(browserName);
+    }  
+</script>
+
+</html>
